@@ -7,7 +7,7 @@ This demo has been fully instrumented to include two endpoints (/ and /parent) v
 * Trace ingestion
   * Single endpoint
   * Parent/child spans
-  * Child span that is not an endpoint
+  * Child span that is a method with no endpoint
 * Metric ingestion
   * Request counter
   * Metric attributes for filter and split by in Dynatrace
