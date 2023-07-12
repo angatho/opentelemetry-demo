@@ -5,11 +5,14 @@ https://www.dynatrace.com/support/help/extend-dynatrace/opentelemetry/walkthroug
 
 This demo has been fully instrumented to include two endpoints (/ and /parent) via flask to demonstrate:
 * Trace ingestion
-* Parent/child spans
+  * Single endpoint
+  * Parent/child spans
+  * Child span that is not an endpoint
 * Metric ingestion
-* Metric attributes to filter a split by in Dynatrace
+  * Request counter
+  * Metric attributes for filter and split by in Dynatrace
 * Log ingestion
-* Linking opentelemetry logs to traces in Dynatrace
+  * Linking opentelemetry logs to traces in Dynatrace
 
 At the time this was written the opentelemetry status for logs in python was experimental so the method to use OpenTelemetry to capture logs may change.
 
