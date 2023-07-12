@@ -116,7 +116,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     # Generate span
-    with tracer.start_as_current_span("Call to /", kind=SpanKind.SERVER ) as index:
+    with tracer.start_as_current_span("Call to /", kind=SpanKind.SERVER) as index:
 
       index.set_attribute("http.method", "GET")
       index.set_attribute("span.kind", "server")
@@ -133,7 +133,7 @@ def index():
 @app.route("/parent")
 def parentchild():
     # Generate span
-    with tracer.start_as_current_span("Call to /parent") as parent:
+    with tracer.start_as_current_span("Call to /parent", kind=SpanKind.SERVER) as parent:
 
       parent.set_attribute("http.method", "GET")
       parent.set_attribute("span.kind", "server")
