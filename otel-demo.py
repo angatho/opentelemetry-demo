@@ -30,7 +30,7 @@ from opentelemetry.sdk._logs.export import BatchLogRecordProcessor
 
 # ===== GENERAL SETUP =====
 
-DT_API_URL = "https://environmentid.dynatrace.com/api/v2/otlp"
+DT_API_URL = "https://environmentid.live.dynatrace.com/api/v2/otlp"
 DT_API_TOKEN = ""
 
 
