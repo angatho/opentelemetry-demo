@@ -20,8 +20,17 @@ At the time this was written the opentelemetry status for logs in python was exp
 
 1. Ensure python is installed on your machine
 2. Ensure that all the dependences required are installed
-3. Modify the DT_API_URL with your endpoint, and add your API token that has the following [scopes](https://www.dynatrace.com/support/help/shortlink/otel-getstarted-otlpexport#authentication-export-to-activegate)
-4. Run the python script. When running this demo app, flask will run on port 5000. So you can access this on your local machine via localhost:5000, to access the parent endpoint use localhost:5000/parent
+
+   `pip install flask`
+
+   `pip install opentelemetry-api`
+
+   `pip install opentelemetry-sdk`
+
+   `pip install opentelemetry-exporter-otlp-proto-http`
+ 
+4. Modify the DT_API_URL with your endpoint, and add your API token that has the following [scopes](https://www.dynatrace.com/support/help/shortlink/otel-getstarted-otlpexport#authentication-export-to-activegate)
+5. Run the python script. When running this demo app, flask will run on port 5000. So you can access this on your local machine via localhost:5000, to access the parent endpoint use localhost:5000/parent
 
 ## Breakdown of how each OpenTelemetry signal is captured
 * This app will send traces to Dynatrace based on the endpoint that is accessed, there is wait time added to each endpoint to simulate reponse times
